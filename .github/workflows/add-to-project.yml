@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Apply project management flow
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - uses: honeycombio/oss-management-actions/projects@v1
         with:
           ghprojects-token: ${{ secrets.GHPROJECTS_TOKEN }}
