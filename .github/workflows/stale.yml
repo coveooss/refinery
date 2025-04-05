@@ -16,11 +16,11 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # v2.11.1
         with:
           egress-policy: audit
 
-      - uses: actions/stale@v4
+      - uses: actions/stale@a20b814fb01b71def3bd6f56e7494d667ddf28da # v4.1.1
         with:
           start-date: '2021-09-01T00:00:00Z'
           stale-issue-message: 'Marking this issue as stale because it has been open 14 days with no activity. Please add a comment if this is still an ongoing issue; otherwise this issue will be automatically closed in 7 days.'

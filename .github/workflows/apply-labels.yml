@@ -6,10 +6,10 @@ jobs:
     name: Apply common project labels
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # v2.11.1
         with:
           egress-policy: audit
 
-      - uses: honeycombio/oss-management-actions/labels@v1
+      - uses: honeycombio/oss-management-actions/labels@3b5a564e4be0eb1ea43006bb77509c3fa769a5ef # v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
